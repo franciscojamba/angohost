@@ -390,19 +390,19 @@ export function PayModal({ openedExit, setOpenedExit }: IExitModalProps) {
                             Selecione o banco
                         </DialogDescription>
                     </DialogHeader>
-                    <div className="flex gap-2">
-                        <Button variant={"outline"} onClick={() => setSelectedBanc(1)} className="banc w-1/2 h-[50px] items-center justify-center p-0" data-selected={selectedBanc === 1}><img src={bai2} className="w-[70px]" alt="bai paga" /></Button>
+                    <div className="flex gap-2  justify-center items-center">
+                        {/* <Button variant={"outline"} onClick={() => setSelectedBanc(1)} className="banc w-1/2 h-[50px] items-center justify-center p-0" data-selected={selectedBanc === 1}><img src={bai2} className="w-[70px]" alt="bai paga" /></Button> */}
                         <Button variant={"outline"} onClick={() => setSelectedBanc(2)} className="banc w-1/2 h-[50px] items-center justify-center p-0" data-selected={selectedBanc === 2}><img src={atl} className="w-[120px]" alt="bai paga" /></Button>
 
                     </div>
                     <div>
                         <div className='mt-2 w-full'>
                             <label htmlFor="" className='font-semibold text-[0.9rem]'>IBAN </label>
-                            <input type="text" disabled value={selectedBanc === 1 ? "0040 0000 1923 3559 1019 8" : "0055 0000 3795 7135 1010 3"} className='w-full text-center h-[30px] rounded-[12px] bg-white border-solid px-4' />
+                            <input type="text" disabled value={selectedBanc === 1 ? "0055 0000 3795 7135 1010 3" : "0055 0000 3795 7135 1010 3"} className='w-full text-center h-[30px] rounded-[12px] bg-white border-solid px-4' />
                         </div>
                         <div className='mt-2 w-full'>
                             <label htmlFor="" className='font-semibold text-[0.9rem]'>Conta </label>
-                            <input type="text" disabled value={selectedBanc === 1 ? "119233559 10 001" : "137957135 10 001"} className='w-full text-center h-[30px] rounded-[12px] bg-white border-solid px-4' />
+                            <input type="text" disabled value={selectedBanc === 1 ? "137957135 10 001" : "137957135 10 001"} className='w-full text-center h-[30px] rounded-[12px] bg-white border-solid px-4' />
                         </div>
                         <div className='mt-2 w-full'>
                             <label htmlFor="" className='font-semibold text-[0.9rem]'>Titular </label>
