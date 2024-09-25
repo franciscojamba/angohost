@@ -179,6 +179,12 @@ export default function DetailsView() {
                                     <TableHead className="p-2">
                                         Descrição
                                     </TableHead>
+                                    {currentService &&
+                                        "Dominio" in currentService && currentService.Dominio.chaveEpp &&
+                                        <TableHead className="p-2">
+                                            ChaveEpp
+                                        </TableHead>
+                                    }
                                     <TableHead className="p-2">
                                         Início
                                     </TableHead>
@@ -199,6 +205,12 @@ export default function DetailsView() {
                                                 Domínio{" "}
                                                 {currentService.Dominio.dominio}
                                             </TableCell>
+                                            {currentService.Dominio.chaveEpp &&
+                                                <TableCell className="p-2">
+                                                   
+                                                    {currentService.Dominio.chaveEpp}
+                                                </TableCell>
+                                            }
                                             <TableCell className="p-2">
                                                 {formatDate(
                                                     currentService.criadoEm
