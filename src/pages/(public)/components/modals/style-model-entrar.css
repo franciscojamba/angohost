@@ -1,0 +1,52 @@
+.card-infomations-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    background: #ffffff;
+    z-index: 2;
+    border-radius: 8px;
+    padding:  10px;
+    margin-top: 20px;
+    margin-right: 200px;
+    box-shadow: 0px 2px 4px #121212;
+  
+}
+
+.link-painel-flex{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-infomations-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-infomations-title p {
+    color: red;
+}
+.link-painel-info{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+.link-painel-info p{
+    color: #121212;
+    font-size: 14px;
+}
+
+
+.icon-redondo{
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    background: #99a4a53d;
+    padding: 4px;
+}

@@ -1,0 +1,58 @@
+.container-acordion{
+    margin-top: 56px;
+    margin-bottom: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-acordion-width{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.planos-hospedagems-windows-cards{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  margin-top: 20px;
+}
+
+.planos-hospedagems-windows{
+  margin-top: 20px;
+}
+
+  .container-hospedagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(122deg, rgba(1, 38, 83, 1) 12%, rgba(0, 109, 176, 1) 100%);
+    color: #fff;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .container-hospedagem-wordpress{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    
+  }
+  .content-hospedagem-wordpress-left {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .content-hospedagem-wordpress-rigth{
+    display: flex;
+    
+   
+  }

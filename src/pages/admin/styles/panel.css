@@ -1,0 +1,10 @@
+p {
+    font-size: 0.8rem;
+}
+
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

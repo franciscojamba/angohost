@@ -1,0 +1,107 @@
+.container-acordion {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-acordion-width {
+    width: 50%;
+  }
+  
+  .container-hospedagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(122deg, rgba(1, 38, 83, 1) 12%, rgba(0, 109, 176, 1) 100%);
+    color: #fff;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .container-hospedagem-wordpress{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    
+  }
+  .content-hospedagem-wordpress-left {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .content-hospedagem-wordpress-rigth{
+    display: flex;
+    
+   
+  }
+  
+  
+  .content-info h3 {
+    font-size: 14px;
+    color: #ffffff9a;
+  }
+  
+  .content-info h2 {
+    width: 600px;
+    font-size: 40px;
+    color: #fff;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  
+  
+  .planos-word-press{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin-top: 56px;
+  }
+  
+  .plano-title{
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    .privacy-policy-container {
+        padding: 15px;
+    }
+    
+    .privacy-policy-container h1 {
+        font-size: 1.5em;
+    }
+    
+    .privacy-policy-container h2 {
+        font-size: 1.2em;
+    }
+    
+    .privacy-policy-container p,
+    .privacy-policy-container li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-policy-container {
+        padding: 10px;
+    }
+    
+    .privacy-policy-container h1 {
+        font-size: 1.2em;
+    }
+    
+    .privacy-policy-container h2 {
+        font-size: 1em;
+    }
+    
+    .privacy-policy-container p,
+    .privacy-policy-container li {
+        font-size: 0.8em;
+    }
+}

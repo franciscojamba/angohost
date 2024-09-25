@@ -1,0 +1,207 @@
+
+
+.contente-hero-primeiro{
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+    padding-bottom: 90px;
+}
+
+.content-hero-pub-news {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid #fff;
+}
+
+.contente-hero-flex {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-hero-title h2 {
+    color: rgb(31, 32, 68);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contente-hero-flex {
+    padding: 15px;
+}
+
+.content-hero-time p {
+    color: rgb(54, 54, 54);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+
+
+}
+
+.content-hero-left, .content-hero-rigth {
+    width: 50% !important;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-hero-rigth {
+    align-items: start;
+    width: 45% !important;
+}
+
+.content-hero-paragrafo p {
+    color: rgb(54, 54, 54);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 22px;
+}
+
+.content-hero-paragrafo-flex {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    font-size: .85rem;
+}
+
+.content-hero-left-img {
+    width: 480px;
+    height: auto;
+}
+
+
+
+.card-hero-new-service {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 280px;
+    padding: 10px;
+}
+
+.card-hero-btn-saiba-mais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
+    gap: 2px;
+}
+
+.card-hero-btn-saiba-mais svg {
+    transition: transform .3s ease-in-out;
+}
+
+.card-hero-new-service:hover svg {
+    transform: translateX(7px);
+}
+
+.card-hero-btn-saiba-mais a {
+    text-decoration: none;
+    color: #0e3f7b;
+    font-weight: 500;
+}
+
+.list-cards-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 56px;
+   
+}
+
+.card-hero-title h2 {
+    color: rgb(31, 32, 68);
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    transition: color 0.2s ease 0s;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.card-content-paragrafo p {
+    margin-bottom: 20px;
+}
+
+@media (max-width:985px) {
+    .contente-hero-flex {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 56px;
+    }
+    .card-hero-new-service {
+        width: 100% !important;
+        align-items: center;
+        height: max-content !important;
+    }
+    .card-content-paragrafo {
+        text-align: center;
+    }
+    .card-hero-title {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+    }
+    .content-hero-rigth {
+        width: 90% !important;
+        align-items: center;
+    }
+    .content-hero-title {
+        width: 100% !important;
+        text-align: center;
+    }
+    .content-hero-paragrafo {
+        text-align: center;
+        width: 100%;
+    }
+    .content-hero-paragrafo-flex-container {
+        width: 100%;
+    }
+    .content-hero-left-img {
+        width: 100%;
+        height: auto;
+    }
+    .content-hero-title{
+        width: 200px;
+    }
+    .content-hero-title p {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .list-cards-flex{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .content-hero-title h2 {
+        font-size: 1.4rem;
+        line-height: 30px;
+        width: 100%;
+    }
+}

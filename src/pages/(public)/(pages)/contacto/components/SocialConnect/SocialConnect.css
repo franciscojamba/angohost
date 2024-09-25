@@ -1,0 +1,76 @@
+.social-connect-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff; /* White background */
+}
+
+.image-container img {
+    width: 50%; /* Adjust based on your layout needs */
+    height: auto;
+}
+
+.connect-section {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.connect-section h2 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.connect-section h1 {
+    color: #000;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.social-icons {
+    font-size: 2rem; /* Adjust icon size */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons a {
+    color: #666; /* Icon color */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0e3f7b; /* Icon hover color */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .social-connect-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img, .connect-section {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .connect-section {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .social-icons {
+        font-size: 1.5rem; /* Smaller icons for smaller screens */
+        gap: 10px; /* Reduced gap between icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .connect-section h1 {
+        font-size: 2rem; /* Smaller font size for very small screens */
+    }
+
+    .connect-section h2 {
+        font-size: 1rem; /* Smaller font size for headings on very small screens */
+    }
+}

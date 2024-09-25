@@ -1,0 +1,5 @@
+.card_left {
+    background-image: url(../../../assets/images/bg-corporative.jpg);
+    background-size: cover;
+    filter: sepia(10%) contrast(0.8);
+}

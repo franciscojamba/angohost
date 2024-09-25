@@ -1,0 +1,118 @@
+.banner-home{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(122deg, rgba(1,38,83,1) 12%, rgba(0,109,176,1) 100%); */
+    background: #f4f2ee;
+    padding-top: 50px;
+    padding: 0px 0px;
+}
+
+
+.banner-home-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #edf3f8;
+
+}
+.banner-home-left{
+    width: 45%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+
+}
+.banner-home-rigth{
+    width: 45%;
+
+}
+
+@media screen and (max-width: 980px) {
+    .banner-home-rigth {
+        display: none;
+    }
+    .banner-home-left {
+        width: 100%; 
+        justify-content: center;
+        padding: 0px 20px;
+    }
+    .banner-home-left-info > h2, .banner-home-left-info .text-zinc-600, .banner-home-left-info > p {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .banner-home-left-info-button_container{
+        justify-content: center !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+.banner-home-image-capa{
+    width: 100%;
+}
+.banner-home-image-capa img{
+    width: 100%;
+}
+.banner-home-bottom{
+    padding: 0px 20px;
+    background: #ffff;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 5px solid #0e3f7b;
+}
+.banner-home-bottom-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.banner-home-bottom-flex a{
+color: #0e3f7b;
+font-size: 20px;
+font-weight: 600;
+}
+.banner-home-left-info-button_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+@media screen and (max-width: 450px) {
+    .banner-home-left-info-button_container {
+        flex-direction: column;
+    }
+    .banner-home-left-info-button_container>a {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.banner-home-left-info > h2{
+    color: #012653;
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 700;
+    text-align: left;
+    max-width: 510px;
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+.banner-home-left-info-h4 {
+    color: #0e3f7b;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+
+}
+.banner-home-left-info p{
+    width: 400px;
+    color: #121212;
+    text-align: left;
+    margin-bottom: 20px !important;
+}

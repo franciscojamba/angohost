@@ -1,0 +1,37 @@
+.nossos-planos{
+    width: 100%;
+    background: #edf3f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom:20px ;
+    
+
+
+}
+.pricing-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+.plano-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 26px;
+}
+.plano-title h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #0e3f7b;
+}
+.plano-title p{
+    color: #0e3f7b;
+    font-size: 14px;
+}

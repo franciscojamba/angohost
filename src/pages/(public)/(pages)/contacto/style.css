@@ -1,0 +1,228 @@
+.container-contacto-petrohost{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    margin: 0;
+    padding: 0;
+    
+
+
+}
+.container-contacto-petrohost-banner{
+    width: 100%;
+    height: 60vh;
+    border-top: 2px solid #fff;
+    background: linear-gradient(122deg, rgba(1,38,83,1) 12%, rgba(0,109,176,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.container-contacto-petrohost-banner-info{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    
+}
+.container-contacto-petrohost-banner-info-rigth{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-contacto-petrohost-banner-info-rigth-img{
+    width: 100%;
+}
+.container-contacto-petrohost-banner-info-rigth-img img{
+    width: 100%;
+    height: 400px;
+}
+
+
+.container-contacto-petrohost-banner-info h2{
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.container-contacto-petrohost-banner-info p{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 14px;
+}
+
+
+.container-contacto-petrohost-form-contacto{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    
+    
+}
+
+.container-contacto-petrohost-form{
+    top: 00px;
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 56px;
+    padding: 14px;
+    width: 80%;
+    height: 800px;
+    background: linear-gradient(122deg, rgba(1,38,83,1) 12%, rgba(0,109,176,1) 100%);
+    border-radius: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0,0, 0.6);
+
+}
+.container-contacto-petrohost-form-left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-contacto-petrohost-form-regth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+.container-contacto-petrohost-form-regth img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-contacto-petrohost-form-left-top-info{
+    margin-top: 14px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-contacto-petrohost-form-left-top-info h2{
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.container-contacto-petrohost-banner-flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 140px;
+}
+
+.container-contacto-petrohost-banner-info-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas menores que 1024px */
+@media (max-width: 1024px) {
+    .container-contacto-petrohost-banner-info {
+        width: 70%;
+    }
+    .container-contacto-petrohost-form-left-top-info h2{
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #fff;
+    }
+    .container-contacto-petrohost-banner-info h2 {
+        font-size: 28px;
+    }
+
+    .container-contacto-petrohost-banner-info p {
+        font-size: 16px;
+    }
+
+    .container-contacto-petrohost-form {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        top: -100px;
+    }
+
+    .container-contacto-petrohost-form-left,
+    .container-contacto-petrohost-form-regth {
+        width: 100%;
+    }
+
+    .container-contacto-petrohost-form-regth {
+        margin-top: 20px;
+    }
+}
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+    .container-contacto-petrohost-banner-info {
+        width: 80%;
+    }
+
+    .container-contacto-petrohost-banner-info h2 {
+        font-size: 24px;
+    }
+
+    .container-contacto-petrohost-banner-info p {
+        font-size: 14px;
+    }
+
+    .container-contacto-petrohost-form {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .container-contacto-petrohost-form-left,
+    .container-contacto-petrohost-form-regth {
+        width: 100%;
+    }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+    .container-contacto-petrohost-banner-info {
+        width: 90%;
+    }
+
+    .container-contacto-petrohost-banner-info h2 {
+        font-size: 20px;
+    }
+
+    .container-contacto-petrohost-banner-info p {
+        font-size: 12px;
+    }
+
+    .container-contacto-petrohost-form {
+        width: 100%;
+        padding: 8px;
+        top: -80px;
+    }
+
+    .container-contacto-petrohost-form-left,
+    .container-contacto-petrohost-form-regth {
+        width: 100%;
+    }
+
+    .container-contacto-petrohost-form-regth img {
+        display: none;
+    }
+}

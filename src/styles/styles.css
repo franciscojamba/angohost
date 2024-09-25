@@ -1,0 +1,580 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+    background: #f4f2ee;
+    text-decoration: none;
+}
+
+a{
+    text-decoration :  none;
+    cursor: pointer;
+}
+
+.absolute.right-4.top-4.rounded-sm.opacity-70.ring-offset-background.transition-opacity.hover\:opacity-100.focus\:outline-none.focus\:ring-2.focus\:ring-ring.focus\:ring-offset-2.disabled\:pointer-events-none.data-\[state\=open\]\:bg-accent.data-\[state\=open\]\:text-muted-foreground {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.transition-simple {
+    @apply transition ease-in-out duration-300
+}
+
+input, textarea, button, select {
+    outline: none!important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a[data-focused="true"] {
+    background: #ffffff;
+    color: #003b5d !important;
+    letter-spacing: 1px;
+}
+
+a[data-focused="true"]:hover {
+    background: white !important;
+}
+
+a[data-focused="true"] svg {
+    stroke-width: 2px;
+}
+
+.text-gradient {
+    background: linear-gradient(122deg, #012653 12%, #006db0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
+/* @font-face {
+    font-family: Rubik;
+    src: url(../assets/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: Rubik;
+} */
+
+.sc-aYaIB.beMdzI {
+    background-color: #edf3f8 !important;
+}
+
+@media (max-width:2000px) {
+    .search-bar {
+        background: "";
+
+    }
+
+    .search-bar input[type="text"] {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .search-bar {
+        background: "";
+    }
+
+    .search-bar input[type="text"] {
+        width: 600px;
+    }
+}
+
+@media (max-width:1080px) {
+    .search-bar {
+        flex-direction: row;
+    }
+
+    .search-bar input[type="text"] {
+        width: 500px;
+    }
+
+    .banner-home-left-info>h2 {
+        font-size: 26px !important;
+        line-height: 26px;
+    }
+}
+
+@media(max-width:768px) {
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .content-info {
+        width: 100%;
+    }
+
+    .content-info h2 {
+        width: 80%;
+        font-size: 32px;
+    }
+
+    .domain-options {
+        flex-direction: column;
+    }
+
+    .domain-options {
+        width: 100%;
+
+    }
+
+    .domain-options h2 {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        text-wrap: wrap;
+        text-align: start;
+    }
+
+    .domain-option {
+        width: 100%;
+    }
+
+    .container-afinal-left {
+        width: 100%;
+    }
+
+    a .hospedagem {
+        text-decoration: none;
+        text-align: start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+    .content-hospedagem-wordpress-rigth {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .planos-button-flex {
+        width: 100%;
+    }
+
+    .search-bar-dominio {
+        width: 68%;
+    }
+
+    .header-dominio-start h2 {
+        font-size: 20px;
+    }
+
+    .header-dominio {
+        margin-left: 0;
+    }
+
+    .pricing-card {
+        width: 80%;
+        height: auto;
+    }
+
+    .plano-title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    .list-clientes {
+
+        flex-flow: column;
+        height: auto;
+
+        padding: 20px;
+    }
+
+    .cliente-container {
+        height: auto;
+    }
+
+    .plano-title h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .plano-title p {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .ratings-container {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .banner-home-flex {
+        flex-direction: column;
+    }
+
+    .banner-home-left {
+        width: 100%;
+    }
+
+    .banner-home-left-info {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .banner-home-left-info>p {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .banner-home-left-info>h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .banner-home-left-info-h4 {
+        color: #0e3f7b;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .banner-home-left-info>div {
+        justify-content: center;
+    }
+
+
+    .banner-home-bottom {
+        display: none;
+    }
+
+    header {
+        padding: 0px 5px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-bar form a {
+        min-width: 160px !important;
+    }
+
+    .search-bar input[type="text"] {
+        width: 400px;
+        margin-bottom: 14px;
+    }
+
+    .petrohost-banner-2 {
+        width: 100%;
+    }
+
+    .text-section-info {
+        width: 400px;
+    }
+
+    .petrohost-banner-2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .Accordion {
+        width: 400px;
+    }
+
+    .petrohost-iframe-video {
+        width: 100%;
+    }
+
+    .petrohost-iframe-video iframe {
+        width: 100%;
+
+    }
+
+    .container-footer-foo {
+        padding: 5px;
+    }
+
+    .newsletter-text {
+        width: 100%;
+    }
+
+    .newsletter-container {
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .newsletter-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .newsletter-form input {
+        width: 220px;
+    }
+
+    .newsletter-form button {
+        width: 150px;
+        font-size: 14px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .content-footer {
+        flex-direction: column;
+    }
+
+    .content-flex {
+        flex-direction: column;
+    }
+
+    .content-footer .column {
+        width: 90%;
+    }
+
+    .top-bar {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100% !important;
+        margin: 0px;
+    }
+
+    .label-input-search {
+        left: 0px;
+    }
+
+    .search-bar form {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .search-bar {
+        gap: 5px;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-top: 75px;
+        margin-bottom: 20px;
+    }
+
+    .navbar-top-rigth {
+        gap: 20px;
+    }
+
+    .navbar-top a {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .petrohost-banner-2 {
+        display: none;
+    }
+
+    .sc-aYaIB.kXclWT {
+        background: none;
+    }
+
+    /* .navbar {
+        position: absolute;
+        width: 60%;
+        height: 500px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        margin-bottom: 20px;
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+  */
+}
+
+@media screen and (max-width: 464px) {
+    .label-input-search {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: column !important;
+    }
+
+    .prices {
+        flex-flow: wrap;
+        justify-content: space-evenly;
+    }
+
+    .price {
+        min-width: 104px !important;
+        margin: 0 15px !important;
+    }
+
+    .banner-home-left-info {
+        padding: 0 20px !important;
+    }
+
+    .banner-home-left-info p {
+        width: 90%;
+        margin-bottom: 20px !important;
+        margin: 0 auto;
+    }
+
+    .search-bar form {
+        flex-direction: column;
+    }
+
+    .search-bar form a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        border-radius: 10px;
+        width: 100% !important;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .sc-fqkwJk {
+        padding: 10px 20px !important;
+    }
+
+    .petrohost-banner-2-flex {
+        padding: 40px 10px 40px 10px;
+    }
+
+    .card-hero-new-service {
+        padding: 10px 10px 20px 10px;
+    }
+
+    .contente-hero-primeiro {
+        padding: 40px 10px 40px 10px;
+    }
+
+    .content-hero-left {
+        width: 70% !important;
+    }
+
+    .content-hero-paragrafo p {
+        margin-bottom: 40px;
+    }
+
+    .nossos-planos {
+        padding: 50px 10px 50px 10px !important;
+    }
+
+    .slide_item {
+        padding-top: 40px;
+    }
+
+    .newsletter-text h2 {
+        line-height: 30px;
+    }
+
+    .newsletter-text p {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 20px 10px 20px 10px;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .Accordion {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .fZOQmr {
+        width: 100%;
+    }
+
+    .pricing-card {
+        min-width: 350px;
+        padding: 20px 20px;
+    }
+
+    .price-plane-info {
+        margin-bottom: 30px;
+    }
+
+    .search-bar input[type="text"] {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .pricing-container {
+        padding: 0px !important;
+    }
+
+    .nossos-planos {
+        padding: 0px !important;
+    }
+
+    .pricing-card {
+        width: 100vw !important;
+        min-width: 0px !important;
+        border-radius: 0px !important;
+        border: none;
+    }
+
+    .pricing-card-description {
+        margin-top: 20px;
+    }
+}

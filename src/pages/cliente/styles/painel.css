@@ -1,0 +1,17 @@
+.nav_item[data-focused="true"] {
+    background-color: #ffffff;
+    color: #082877;
+    font-weight: 500;
+}
+.nav_item[data-focused="true"]:hover {
+    background: #fff;
+}
+.nav_item {
+    background-color: transparent;
+    color: white;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.nav_item:hover {
+    background-color: #ffffff22;
+}

@@ -1,0 +1,197 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: #edf3f8;
+    padding-bottom: 15px;
+}
+
+.navbar a {
+    color: #0e3f7b;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    padding: 20px 20px;
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.form-input-seach {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding-top: 15px;
+}
+
+.search-bar input[type="text"] {
+    padding: 0px 20px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    height: 41px;
+    width: 60% !important;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    outline: none;
+}
+.search-bar input[type="text"]::placeholder {
+    color: #265288;
+}
+
+.label-input-search {
+    position: absolute;
+    top: -14px;
+    color: #f4f2ee;
+    font-weight: 300;
+}
+
+.search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar a {
+    padding: 11px 22px !important;
+    font-size: 0.8rem !important;
+    border: none;
+    border-radius: 10px;
+    height: max-content !important;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: transparent;
+    height: 48px;
+}
+
+.search-bar button:hover {
+    background-color: #fff;
+    color: #0e3f7b;
+
+}
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prices div {
+    margin: 0 15px;
+    color: #fff;
+}
+
+.price h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0px;
+    line-height: 40px;
+}
+.navbar-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-top-rigth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-right: 3px;
+}
+.list-services-flex{
+    display: flex;
+}
+.hospedagem{
+    position: relative;
+}
+.seu-negocio-internet {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.seu-negocio-internet h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.price p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.nav-icons-top-rigth {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 5px;
+    font-weight: 500;
+    position: relative;
+}
+.nav-icons-top-rigth a{
+    color:#fff;
+}
+
+@media screen and (max-width: 982px) {
+    .search-bar {
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    .search-bar input[type="text"] {
+        width: 80% !important;
+    }
+    .form-input-seach {
+        width: 100%;
+    }
+    .search-bar a {
+        min-width: 170px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .navbar {
+        display: none !important;
+    }
+    div.navbar-top-rigth {
+        display: none !important;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .price {
+        margin: 0px !important;
+    }
+}

@@ -1,0 +1,117 @@
+.petrohost-banner-2-flex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 200px;
+    padding-bottom: 90px !important;
+
+    background-color: #f0f0f0 !important;
+}
+
+
+.petrohost-banner-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    height: 355px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    border-left: 2px solid #0e3f7b;  
+}
+.text-section {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.text-section-title h2{
+ color: #121212;
+ line-height: 34px;
+ font-size: 26px;
+}
+.text-section-info{
+    padding: 0px !important;
+    margin: 0px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text-section-info li {
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 0px !important;
+}
+
+.promo-content {
+    max-width: 50%;
+}
+
+.promo-content h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+}
+
+.promo-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.promo-content ul li {
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.Accordion{
+    margin-top: 25px;
+    width: 70%;
+ 
+}
+
+@media screen and (min-width: 1360px) {
+    .petrohost-banner-2 {
+        max-width: 954px;
+        max-height: 355px;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .petrohost-banner-2 {
+        min-width: 954px;
+    }
+    .petrohost-banner-2-flex{
+        padding: 0px 20px;
+    }
+}
+@media  screen and (max-width: 970px) {
+    .petrohost-banner-2 {
+        flex-direction: column;
+        height: max-content;
+        width: 100%;
+        min-width: 0 !important;
+    }
+    .text-section{
+        width: 80%;
+    }
+    .text-section-title {
+        width: 100%;
+        text-align: center;
+    }
+    .text-section-info {
+        width: 100%;
+    }
+    .text-section-info li {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}

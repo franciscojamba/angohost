@@ -1,0 +1,392 @@
+/* src/DomainRegistration.css */
+.container-dominio {
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(122deg, rgba(1,38,83,1) 12%, rgba(0,109,176,1) 100%);
+  }
+  
+  .navbar-dominio {
+    background-color: #28b16c;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .navbar-dominio a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  
+  .header-dominio {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #ff0000;
+  }
+  .header-dominio-start{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+  }
+  
+  .header-dominio-start h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-dominio-start p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+
+.search-bar-dominio-center{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+  .search-bar-dominio {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 66px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid #cdcdcd;
+  }
+  
+
+
+.input-domain {
+    width: 90%;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    
+}
+.search-bar-dominio-www{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-bar-dominio-www p{
+  text-align: center;
+}
+
+.search-bar-dominio-center-flex{
+  position: absolute;
+
+  z-index: 2;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .search-button {
+    background-color: #ffc107;
+    border: none;
+    padding: 10px 0px;
+    width: 120px;
+    height: 66px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(31, 32, 68);
+    border-right:3px solid rgb(31, 32, 68) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .domain-options-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(246, 246, 249);
+  }
+  
+  .domain-options {
+    width: 59%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(246, 246, 249);
+    text-align: center;
+    padding: 20px;
+  }
+
+.domain-options-title{
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.domain-options h2{
+  width: 250px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-wrap: wrap;
+  text-align: start;
+}
+
+  .domain-option {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .domain-option span{
+    font-weight: 600;
+    margin: 0px 3px;
+  }
+  
+  .discount {
+    color: #0e3f7b;
+    margin-left: 10px;
+  }
+  
+  .price-dominio {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  
+
+.main{
+    width: 100%;
+    height: 700px;
+    padding: 0px 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+    gap: 56px;
+    
+
+}
+
+  .container-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  
+    font-family: sans-serif;
+    background-color: #e2dede;
+  }
+  
+  .header-second {
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header-second h1 {
+    font-size:20px;
+}
+
+
+
+.section {
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .price span.old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .price span.new-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .price span.discount {
+    font-size: 14px;
+    color: #4caf50;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  .container-afinal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    flex-direction: column;
+    margin-top: 56px;
+    position: relative;
+  }
+
+ .container-afinal-flex{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+ }
+
+.container-afinal-left{
+  width: 50%;
+  
+  padding: 10px;
+}
+.container-afinal-left-info{
+  width:100%;
+}
+.container-afinal-left-info h2 {
+  color: #0e3f7b;
+  font-size: 32px;
+}
+.container-afinal-left-info p{
+  color: #121212;
+  margin-bottom: 24px;
+}
+.container-afinal-left-info-list p{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  color: #121212;
+  margin-bottom: 0px;
+}
+
+
+
+
+.container-afinal-rigth{
+  width: 50%;
+  position: relative;
+  margin-top: 56px;
+
+ }
+
+
+.container-afinal-rigth-fundo{
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  background: red;
+  position: absolute;
+  z-index: 1;
+}
+
+.container-acordion{
+  margin-top: 56px;
+  margin-bottom: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-acordion-width{
+  width: 50%;
+}
+
+.oque-e-dominio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oque-e-dominio img{
+  width: 400px;
+}
+
+.container-afinal-left-info h2{
+  color: #121212;
+}
+
+@media screen and (max-width: 768px) {
+    .inf {
+        width: 90% !important;
+    }
+}

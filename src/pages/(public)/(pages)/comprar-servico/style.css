@@ -1,0 +1,33 @@
+.css-13cymwt-control, .css-t3ipsp-control{
+    height: 100% !important;
+    border: none !important;
+    outline: none !important;
+    border-left: 1px solid #0161a044 !important;
+    border-radius: 0px !important;
+}
+
+.css-1u9des2-indicatorSeparator {
+    display: none !important;
+}
+
+.cardCicle[data-focused="true"] {
+    background: linear-gradient(90deg, #2160ad, #082140);
+    scale: 1.1;
+    transition: all .3;
+    color: #fff;
+}
+
+.modal {
+    background-color: #ffffff37;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+.cardCicle[data-focused="true"] h1, .cardCicle[data-focused="true"] p {
+    color: #fff;
+}
+@media screen and (max-width: 980px) {
+    .css-13cymwt-control {
+        background: #000;
+    }
+}

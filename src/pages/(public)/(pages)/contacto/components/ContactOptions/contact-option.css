@@ -1,0 +1,35 @@
+.contact-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  .contact-sections {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .contact-section {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .contact-section img {
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 10px;
+  }
+  
+  .contact-section h2 {
+    color: #333;
+  }
+  
+  .contact-section p {
+    color: #666;
+  }
+  
+  a {
+    color: #0066cc; /* Blue color for links */
+  }

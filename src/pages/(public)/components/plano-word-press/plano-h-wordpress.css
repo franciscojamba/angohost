@@ -1,0 +1,86 @@
+.pricing-card-h-worpress{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+    border-radius: 8px  ;
+    border-left: 4px solid #12c140;
+    width: 400px;
+    height: 700px;
+}
+
+@media (max-width:768px) {
+    .pricing-card-h-worpress{
+        width: 100%;
+    }
+}
+
+.pricing-card-title-h-windows{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btn-links{
+    margin-bottom: 10px;
+}
+.list-feature--h-windows{
+    margin-top:40px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    
+}
+.list-feature--h-windows li{
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     margin-bottom: 20px;
+     gap: 5px;
+}
+
+.descontos{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+.descontos-economize-valor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #62676c;
+    text-decoration: line-through;
+    padding: 4px;
+}
+
+.descontos-economize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6361be5e;
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 4px;
+}
+
+.price-plano{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-plano p {
+    text-align: center;
+    font-size: 28px;
+    font-weight:bold;
+    color: #121212;
+    
+}
+.pricing-card-title{
+    color: #121212;
+    font-size: 48px;
+}
