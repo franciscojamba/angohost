@@ -1,4 +1,4 @@
-import { AnimatePresence,motion } from "framer-motion";
+import { AnimatePresence, } from "framer-motion";
 import useUtils from "../../../../utils/useutils";
 import "./styel.css"
 
@@ -18,7 +18,7 @@ interface Plano {
   link: () => void
 }
 
-export const PricingCard = ({descontos, planoPopular, preco, precoComDesconto, recursos,titulo , cicle,descricao, info , link}:Plano) => {
+export const PricingCard = ({ planoPopular, preco,  recursos,titulo , cicle,descricao, info , link}:Plano) => {
 
     const { formatMoney } = useUtils()
 
