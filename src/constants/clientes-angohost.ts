@@ -13,6 +13,7 @@ import sonair from "/assets/ClienteAngohost/sonair.png";
 import Sonangol_Distribuidora from "/assets/ClienteAngohost/Sonangol_Distribuidora.png";
 import Sonangol_Logo_Horizontal_Preto4_Footer_2 from "/assets/ClienteAngohost/Sonangol_Logo_Horizontal_Preto4_Footer-2.png";
 import techkllook from "/assets/ClienteAngohost/techkllook.png";
+import aldeianova from "/assets/ClienteAngohost/aldeianova.jpg";
 
 
 export const LogoClienteAngohost= [
@@ -36,4 +37,5 @@ export const LogoClienteAngohost= [
     { name: 'Sonangol_Distribuidora', image: Sonangol_Distribuidora },
     { name: 'Sonangol_Logo_Horizontal_Preto4_Footer_2', image: Sonangol_Logo_Horizontal_Preto4_Footer_2 },
     { name: 'techkllook', image: techkllook },
+    { name: 'techkllook', image: aldeianova },
   ];

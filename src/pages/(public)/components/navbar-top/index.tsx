@@ -88,7 +88,7 @@ const sslData: { title: string; href: string; description: string, url: string }
 
 const emailData: { title: string; href: string; description: string, url: string }[] = [
     {
-        title: "E-Mail",
+        title: "Email Profissional",
         href: "/Email-profissional",
         url: 'https://www.squarebrothers.com/images/icon/email-hosting.svg',
         description:

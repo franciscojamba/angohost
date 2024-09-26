@@ -65,7 +65,7 @@ export const BannerHome =  () => {
                         <h4 className="banner-home-left-info-h4 text-red-500 text-2xl font-semibold ">Oferta por tempo limitado corra!</h4>
                         <div className="banner-home-left-info-button_container  " >
                            {isLoading?<TailSpin color="red" width={20} />: <CountdownClock targetDate={tempoPromo} />}
-                           <Link className="h-[45px] ml-2 px-3 rounded-lg flex items-center justify-center hover:text-white" style={{ textDecoration: "none", background: 'linear-gradient(-90deg, rgb(43 6 67 / 85%), rgb(120 3 121), rgb(2, 18, 31))' }} to={"/hospedagem-de-sites"}>Começa agora <GoArrowRight /> </Link>
+                           <Link className="h-[45px] ml-2 px-3 rounded-lg flex items-center justify-center hover:text-white" style={{ textDecoration: "none", background: 'linear-gradient(-90deg, rgb(43 6 67 / 85%), rgb(120 3 121), rgb(2, 18, 31))' }} to={"/Email-profissional"}>Começa agora <GoArrowRight /> </Link>
                         </div>
                        
                     </div>
