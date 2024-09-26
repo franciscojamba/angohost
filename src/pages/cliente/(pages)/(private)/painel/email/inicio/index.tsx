@@ -38,7 +38,7 @@ export default function EmailView() {
                 <div className='w-full flex gap-2 justify-center font-[Rubik]'  >
                     <div className="flex gap-4 items-center justify-start w-full">
                         <h1 className="text-[#393939] font-[400] text-[1.3rem] font-[Rubik]" style={{ lineHeight: 1 }}>Lista de serviços</h1>
-                        <Link to={'/e-mail'} className="flex items-center justify-center gap-2 h-[38px] text-[0.8rem] px-3 rounded-[8px] text-cyan-800 font-[Rubik] border-[1px] border-solid border-[#305b83]" >Novo serviço <GoPlus size={18} color="rgb(21 94 117)" /></Link>
+                        <Link to={'/Email-profissional'} className="flex items-center justify-center gap-2 h-[38px] text-[0.8rem] px-3 rounded-[8px] text-cyan-800 font-[Rubik] border-[1px] border-solid border-[#305b83]" >Novo serviço <GoPlus size={18} color="rgb(21 94 117)" /></Link>
                     </div>
                     <div className="w-max h-[44px] border-[1px] border-solid rounded-[12px] overflow-hidden p-2 flex bg-white">
                         <div className="flex items-center justify-center">

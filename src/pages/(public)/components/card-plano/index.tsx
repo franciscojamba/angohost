@@ -1,8 +1,8 @@
-import { AnimatePresence, } from "framer-motion";
 import useUtils from "../../../../utils/useutils";
 import "./styel.css"
 
 import { FaCheck } from "react-icons/fa";
+import { CardContainer } from "@/components/ui/3d-card";
 
 interface Plano {
   id:string,
@@ -23,7 +23,7 @@ export const PricingCard = ({ planoPopular, preco,  recursos,titulo , cicle,desc
     const { formatMoney } = useUtils()
 
     return (
-      <AnimatePresence>
+      <CardContainer>
 
       <div 
       
@@ -54,6 +54,6 @@ export const PricingCard = ({ planoPopular, preco,  recursos,titulo , cicle,desc
         </ul>
         
       </div>
-      </AnimatePresence>
+      </CardContainer>
     );
   };

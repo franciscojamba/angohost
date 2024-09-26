@@ -19,13 +19,15 @@
     padding-top: 30px;
 }
 .slide_item_image {
-    width: 50%;
-    filter: grayscale(100%);
+    
+    width: 150px;
     opacity: 70%;
-    height: max-content;
+    height: auto;
+    object-fit: contain;
+    margin: 0 20px;
     transition: all .3s;
 }
-.slide_item_image:hover {
+/* .slide_item_image:hover {
     filter: grayscale(0%);
     opacity: 100%;
-}
+} */

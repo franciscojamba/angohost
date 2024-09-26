@@ -78,7 +78,7 @@ p{
 export const ModalEmail = () => {
     return (
         <ContainerModalHospedagem>
-            <ContainerFlex  to={"/e-mail"} style={{textDecoration:"none"}}  >
+            <ContainerFlex  to={"/Email-profissional"} style={{textDecoration:"none"}}  >
                 <Icon>
                     <img src="https://www.squarebrothers.com/images/icon/email-hosting.svg" alt="" />
                 </Icon>

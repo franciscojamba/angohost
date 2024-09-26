@@ -89,14 +89,14 @@ const sslData: { title: string; href: string; description: string, url: string }
 const emailData: { title: string; href: string; description: string, url: string }[] = [
     {
         title: "E-Mail",
-        href: "/e-mail",
+        href: "/Email-profissional",
         url: 'https://www.squarebrothers.com/images/icon/email-hosting.svg',
         description:
             "Melhor hospedagem de e-mail empresarial acessível.",
     },
     {
         title: "Google Workspace",
-        href: "/e-mail",
+        href: "/Email-profissional",
         url: 'https://www.squarebrothers.com/images/icon/google-workspace.svg',
         description:
             "Colabore mais facilmente com e-mail, Drive, Documentos e muito mais.",

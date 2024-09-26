@@ -103,7 +103,7 @@ const router = createBrowserRouter([
                 element: <GoogleSEOServices />
             },
             {
-                path: "e-mail",
+                path: "Email-profissional",
                 element: <EmailPagePlano />
             },
             {
