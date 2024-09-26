@@ -416,7 +416,7 @@ export function GlobeDemo() {
 
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-screen dark:bg-black bg-white relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
@@ -432,15 +432,10 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-            Angohost servindo o Mundo
-          </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <h2 className="text-center text-xl md:text-2xl font-bold text-black dark:text-white">
           Angohost é a sua solução ideal para hospedagem de sites e serviços online. 
-                Estamos aqui para conectar você ao mundo digital, oferecendo um globo interativo que representa 
-                nossas operações globais. Este globo é interativo e personalizável. Divirta-se explorando e 
-                não esqueça de compartilhar suas experiências conosco! :)
-          </p>
+          </h2>
+          
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         {/* <motion.div className="absolute w-full -bottom-20 h-72 md:h-full z-10">

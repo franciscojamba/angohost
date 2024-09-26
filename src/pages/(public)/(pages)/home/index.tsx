@@ -8,8 +8,9 @@ import { Header } from "../../components/header";
 import { ListaDePlano } from "../../components/planos";
 import { SidesClientes } from "../../components/side_clientes";
 import { ContentHero } from "./components/conente-hero-primeiro";
-// import { GlobeDemo } from "../../components/Globe";
+import { GlobeDemo } from "../../components/Globe";
 import { TypewriterEffectSmoothDemo } from "../../components/Typewriter/Typewriter";
+import { GoogleGeminiEffectDemo } from "../../components/Gemini-Effect/GeminiEffect";
 
 export default function Home() {
     
@@ -25,7 +26,8 @@ export default function Home() {
             
             <ContentHero />
             {/* <BannerHeroSecond /> */}
-            {/* <GlobeDemo/> */}
+            <GlobeDemo/>
+            <GoogleGeminiEffectDemo/>
             <TypewriterEffectSmoothDemo/>
             {/* <PetrohostBanner /> */}
             <Footer />
