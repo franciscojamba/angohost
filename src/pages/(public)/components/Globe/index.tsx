@@ -10,12 +10,12 @@ export function GlobeDemo() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        // Definindo que o componente foi carregado
+        
         setIsLoaded(true);
     }, []);
 
     if (!isLoaded) {
-        return <div>Loading...</div>; // Componente de loading
+        return <div>Loading...</div>;
     }
   const globeConfig = {
     pointSize: 4,
@@ -432,9 +432,9 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-2xl font-bold text-black dark:text-white">
+          {/* <h2 className="text-center text-xl md:text-2xl font-bold text-black dark:text-white">
           Angohost é a sua solução ideal para hospedagem de sites e serviços online. 
-          </h2>
+          </h2> */}
           
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
