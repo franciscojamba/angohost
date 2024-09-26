@@ -1,3 +1,4 @@
+import { AnimatePresence,motion } from "framer-motion";
 import useUtils from "../../../../utils/useutils";
 import "./styel.css"
 
@@ -22,15 +23,22 @@ export const PricingCard = ({descontos, planoPopular, preco, precoComDesconto, r
     const { formatMoney } = useUtils()
 
     return (
-      <div className={planoPopular ? "pricing-card pricing-card-m" : "pricing-card"}>
+      <AnimatePresence>
+
+      <div 
+      
+      className={planoPopular
+        ? "pricing-card pricing-card-m hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+        : "pricing-card hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out  cursor-pointer"}
+    >
         <h3  className="pricing-card-title" >{titulo}</h3>
         <div className="pricing-card-description-container">
           <p className="pricing-card-description">{descricao}</p>
         </div>
-        <div className="descontos" >
+        {/* <div className="descontos" >
             <p className="descontos-economize-valor" >{precoComDesconto} kz</p>
             <p className="descontos-economize" >ECONOMIZE {descontos}%</p>
-        </div>
+        </div> */}
        <div  className="price-plano" >
        <p>{formatMoney(preco)}<span>{cicle}</span></p>
        </div>
@@ -46,5 +54,6 @@ export const PricingCard = ({descontos, planoPopular, preco, precoComDesconto, r
         </ul>
         
       </div>
+      </AnimatePresence>
     );
   };
