@@ -23,10 +23,11 @@ export default function Home() {
             <BannerHome />
             <SidesClientes />
             <ListaDePlano />
+            <GlobeDemo/>
             
             <ContentHero />
             {/* <BannerHeroSecond /> */}
-            <GlobeDemo/>
+          
             {/* <GoogleGeminiEffectDemo/> */}
             <TypewriterEffectSmoothDemo/>
             {/* <PetrohostBanner /> */}
