@@ -21,7 +21,10 @@ export const ListaDePlano = () => {
     const { cartLenght } = useCart()
 
     useEffect(() => {
-        setPlans(data as IPlano[])
+        const filtroPlanoGuro=data?.filter(plano=>plano.titulo!=="Guru") 
+        setPlans(filtroPlanoGuro as IPlano[])
+
+
         console.log(data)
     }, [data])
 
