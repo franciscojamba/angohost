@@ -416,20 +416,12 @@ export function GlobeDemo() {
 
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-[#EDF3F8] relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-      
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent  z-40" />
-        {/* <motion.div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <Globe data={sampleArcs} globeConfig={globeConfig} />
-        </motion.div> */}
-
-            <Suspense fallback={<div>carregando</div>} >
-            <motion.div className="absolute w-full -top-16 break-keep h-72 md:h-full z-10">
+    <div className="flex flex-row items-center justify-center h-[800px]   dark:bg-black bg-[#EDF3F8] relative w-full">
+      <Suspense fallback={<div>carregando</div>} >
+            <motion.div className="absolute w-full -top-[250px] break-keep h-72 md:h-full z-50">
                 <LazyWorld  data={sampleArcs}  globeConfig={globeConfig} /> {/* Renderiza o componente importado */}
             </motion.div>
             </Suspense>
-      </div>
     </div>
   );
 }
