@@ -27,6 +27,7 @@ import { Ciclo, IPlano } from "@/interfaces/plan.interface"
 import { ExitModal } from "../exitModal"
 import useCart from "@/hooks/useCart"
 import axios from "axios"
+import { IMinfinResponse } from "../buyDomainModal"
 //import proxy from "@/services/proxy"
 
 
@@ -88,14 +89,14 @@ interface ApiResponse {
 }
 */
 
-interface IEdgarResponse {
-    data: {
-        success: boolean,
-        nome: string,
-        numero_contacto: string,
-        endereco: string,
-    }
-}
+// interface IEdgarResponse {
+//     data: {
+//         success: boolean,
+//         nome: string,
+//         numero_contacto: string,
+//         endereco: string,
+//     }
+// }
 
 
 const NIF_REGEX = /^[0-9]{10}$/
@@ -245,25 +246,30 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
         //     setLoadingVerify(false)
         // }º
         try {
-            const response: IEdgarResponse = await (await axios.get(`https://consulta.edgarsingui.ao/public/consultar-por-nif/${nif}`)).data
-            if (response.data.success) {
-                toast.success('BI Verificado com sucesso!')
-                setClientLoadedInfo({
-                    name: response.data.nome
-                })
-                if (NIF_REGEX.test(nif)) {
-                    setIsNIFLoaded(true)
-                    setIsBILoaded(false)
-                }
-                else if (BI_REGEX.test(nif)) {
-                    setIsBILoaded(true)
-                    setIsNIFLoaded(false)
-                }
-            }
-        }
-        catch {
-            toast.error('Ocorreu um erro ao processar a sua solicitação!')
-        }
+            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+            console.log(response)
+ 
+ 
+          
+          
+             if (response.success) {
+                 toast.success('BI Verificado com sucesso!')
+                 setClientLoadedInfo({
+                     name: response.data.gsmc
+                 })
+                 if (NIF_REGEX.test(nif)) {
+                     setIsNIFLoaded(true)
+                     setIsBILoaded(false)
+                 }
+                 else if (BI_REGEX.test(nif)) {
+                     setIsBILoaded(true)
+                     setIsNIFLoaded(false)
+                 }
+             }
+         }
+         catch {
+             toast.error('Ocorreu um erro ao processar a sua solicitação!')
+         }
         finally {
             setLoadingVerify(false)
         }

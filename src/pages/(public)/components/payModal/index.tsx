@@ -28,6 +28,7 @@ import { toast } from "sonner"
 //import proxy from "@/services/proxy"
 import usePayHosting from "@/hooks/usePayHosting"
 import api from "@/services/api"
+import { IMinfinResponse } from "../buyDomainModal"
 import axios from "axios"
 
 interface Client {
@@ -93,14 +94,14 @@ interface ApiResponse {
 }
 */
 
-interface IEdgarResponse {
-    data: {
-        success: boolean,
-        nome: string,
-        numero_contacto: string,
-        endereco: string,
-    }
-}
+// interface IEdgarResponse {
+//     data: {
+//         success: boolean,
+//         nome: string,
+//         numero_contacto: string,
+//         endereco: string,
+//     }
+// }
 
 interface IExitModalProps {
     openedExit: boolean,
@@ -334,30 +335,30 @@ export function PayModal({ openedExit, setOpenedExit }: IExitModalProps) {
         //     setLoadingVerify(false)
         // }º
         try {
-            const response:IEdgarResponse = await(await axios.get(`https://consulta.edgarsingui.ao/public/consultar-por-nif/${nif}`)).data
-            if (response.data.success) {
-
-                setClientLoadedInfo({
-                    name: response.data.nome
-                })
-                if(NIF_REGEX.test(nif)) {
-                    toast.success('NIF verificado com sucesso!')
+            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+            console.log(response)
+ 
+ 
+          
+          
+             if (response.success) {
+                 toast.success('BI Verificado com sucesso!')
+                 setClientLoadedInfo({
+                     name: response.data.gsmc
+                 })
+                 if (NIF_REGEX.test(nif)) {
                      setIsNIFLoaded(true)
                      setIsBILoaded(false)
-                    setLoadingVerify(false)
-                    setOpenCreateAccount(true)
-                }
-                else if (BI_REGEX.test(nif)) {
-                    setIsBILoaded(true)
-                    setIsNIFLoaded(false)
-                    setOpenCreateAccount(true)
-                    toast.success('BI Verificado com sucesso!')
-                }
-            }
-        }
-        catch {
-            toast.error('Ocorreu um erro ao processar a sua solicitação!')
-        }
+                 }
+                 else if (BI_REGEX.test(nif)) {
+                     setIsBILoaded(true)
+                     setIsNIFLoaded(false)
+                 }
+             }
+         }
+         catch {
+             toast.error('Ocorreu um erro ao processar a sua solicitação!')
+         }
         finally {
             setLoadingVerify(false)
         }

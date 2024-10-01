@@ -27,6 +27,7 @@ import useCart from "@/hooks/useCart"
 import { ExitModal } from "../exitModal"
 //import proxy from "@/services/proxy"
 import axios from "axios"
+import { IMinfinResponse } from "../buyDomainModal"
 
 /*
 interface IYabaduRespose {
@@ -91,14 +92,14 @@ interface Email {
     atualizadoEm: string;
 }
 
-interface IEdgarResponse {
-    data: {
-        success: boolean,
-        nome: string,
-        numero_contacto: string,
-        endereco: string,
-    }
-}
+// interface IEdgarResponse {
+//     data: {
+//         success: boolean,
+//         nome: string,
+//         numero_contacto: string,
+//         endereco: string,
+//     }
+// }
 
 const NIF_REGEX = /^[0-9]{10}$/
 const BI_REGEX = /^[0-9]{9}[a-zA-Z]{2}[0-9]{3}$/
@@ -315,11 +316,17 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
         //     setLoadingVerify(false)
         // }º
         try {
-            const response: IEdgarResponse = await (await axios.get(`https://consulta.edgarsingui.ao/public/consultar-por-nif/${nif}`)).data
-            if (response.data.success) {
+            
+            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+           console.log(response)
+
+
+         
+         
+            if (response.success) {
                 toast.success('BI Verificado com sucesso!')
                 setClientLoadedInfo({
-                    name: response.data.nome
+                    name: response.data.gsmc
                 })
                 if (NIF_REGEX.test(nif)) {
                     setIsNIFLoaded(true)
