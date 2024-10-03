@@ -343,18 +343,21 @@ export function PayModal({ openedExit, setOpenedExit }: IExitModalProps) {
           
           
              if (response.success) {
-                 toast.success('BI Verificado com sucesso!')
+                
                  setClientLoadedInfo({
                      name: response.data.gsmc
                  })
                  if (NIF_REGEX.test(nif)) {
                      setIsNIFLoaded(true)
                      setIsBILoaded(false)
+                     toast.success('BI Verificado com sucesso!')
                  }
                  else if (BI_REGEX.test(nif)) {
                      setIsBILoaded(true)
                      setIsNIFLoaded(false)
+                     toast.success('BI Verificado com sucesso!')
                  }
+                 setOpenCreateAccount(true)
              }
          }
          catch {
