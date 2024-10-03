@@ -1,10 +1,9 @@
-import "./hospedagem-wordpress.css"
+import "./email-office-365.css"
 import { AccordionPetrohost } from "../../components/Accordion/Accordion"
 import { Footer } from "../../components/footer"
 import NavbarFull from "../../components/nav/nav"
 import { LOGOBRANCO } from "../../../../utils/logos"
-import { FaMailBulk } from "react-icons/fa";
-import { Link } from "react-router-dom"
+import { FaMicrosoft } from "react-icons/fa";
 import { Helmet } from "react-helmet"
 import { PricingCard } from "../../components/card-plano"
 import { useEffect, useState } from "react"
@@ -66,7 +65,8 @@ const PaginaEmailOffice365 = () => {
         <>
             <Helmet>
                 <title>E-mail Corporativo - Aumente a credibilidade da sua empresa</title>
-                <h1>E-mail Corporativo - Aumente a credibilidade da sua empresa</h1>
+                <h1>Encontre o melhor plano do Microsoft 365 para a sua empresa
+                </h1>
             </Helmet>
             <NavbarFull logo={LOGOBRANCO} color="#ffff" />
             <div>
@@ -74,11 +74,11 @@ const PaginaEmailOffice365 = () => {
                     <div className="container-hospedagem-wordpress" >
                         <div className="content-hospedagem-wordpress-left">
                             <div className="content-info" >
-                                <h3>E-mail</h3>
-                                <h2>Crie Seu Email Profissional com a Angohost!</h2>
-                                <p><strong>Credibilidade e Confiabilidade</strong>, Tenha um endereço de email personalizado que inspira confiança.</p>
+                                <h3>Microsoft 365</h3>
+                                <h2>Escolha entre planos com e sem o Microsoft Teams</h2>
+                                <p><strong>Credibilidade e Confiabilidade</strong>, Poupe 16% ao pagar anualmente</p>
                             </div>
-                            <div className="planos-button-flex" >
+                            {/* <div className="planos-button-flex" >
                                 <Link to={"/hospedagem-de-sites"} className="plans-button">Ver planos</Link>
 
                                 <div className="price-info">
@@ -87,11 +87,11 @@ const PaginaEmailOffice365 = () => {
 
                                 </div>
 
-                            </div>
+                            </div> */}
                             {/* <a href="#blog-petrohost" className="why-hostgator">Por que escolher a Petrohost</a> */}
                         </div>
                         <div className="content-hospedagem-wordpress-rigth" >
-                            <FaMailBulk color="#fff" size={200} />
+                            <FaMicrosoft  color="#fff" size={200} />
                         </div>
                     </div>
 

@@ -5,7 +5,7 @@ import { NavMenu } from "../navbar-top"
 const ContainerNav=styled.div`
 width: 100%;
 padding: 0px 20px;
-background: linear-gradient(122deg, rgba(1,38,83,1) 12%, rgba(0,109,176,1) 100%);
+background: linear-gradient(-90deg, rgba(43, 6, 67, 0.85), rgb(120, 3, 121), rgb(2, 18, 31));
 display: flex;
 flex-direction: column;
 `
@@ -20,7 +20,9 @@ const NavbarFull=({logo, color}:propsNavBarTopColor)=>{
     return(
         <ContainerNav>
             <HomeNavBarTop logo={logo} color={color}/>
+            <hr  className="bg-white" />
             <NavMenu/>
+            <hr  className="bg-white" />
         </ContainerNav>
     )
 }

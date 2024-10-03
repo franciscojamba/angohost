@@ -137,7 +137,7 @@ export const HomeNavBarTop = ({ logo, color }: propsNavBarTopColor) => {
     ];
 
     return (
-        <div className="navbar-top">
+        <div className="navbar-top  ">
             <div className="flex items-center justify-center gap-2">
                 <Link to={"/"} >
                     <img width="150" height="auto"

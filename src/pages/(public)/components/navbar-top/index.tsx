@@ -122,7 +122,7 @@ const contactData: { title: string; href: string; description: string, url: stri
 
 export function NavMenu() {
     return (
-        <div className="bg-red-100 py-2 " style={{ background: 'linear-gradient(-90deg, rgb(43 6 67 / 85%), rgb(120 3 121), rgb(2, 18, 31))' }}>
+        <div className="bg-red-100 py-2  " style={{ background: 'linear-gradient(-90deg, rgb(43 6 67 / 85%), rgb(120 3 121), rgb(2, 18, 31))' }}>
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>

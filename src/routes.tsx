@@ -55,6 +55,7 @@ import EmailConfirm from "./pages/cliente/(pages)/(auth)/emailConfirmation";
 import RecoverCredentials from "./pages/cliente/(pages)/(auth)/recover-password";
 import ResetPassword from "./pages/cliente/(pages)/(auth)/reset-password";
 import Expired from "./pages/(public)/(pages)/expired";
+import PaginaEmailOffice365 from "./pages/(public)/(pages)/email-office-365";
 
 const router = createBrowserRouter([
     {
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
             {
                 path: "Email-profissional",
                 element: <EmailPagePlano />
+            },
+            {
+                path:"Email-Office-365",
+                element:<PaginaEmailOffice365/>
             },
             {
                 path: "ssl",
