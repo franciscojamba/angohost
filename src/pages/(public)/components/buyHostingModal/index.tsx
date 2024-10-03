@@ -27,7 +27,6 @@ import { Ciclo, IPlano } from "@/interfaces/plan.interface"
 import { ExitModal } from "../exitModal"
 import useCart from "@/hooks/useCart"
 import axios from "axios"
-import { IMinfinResponse } from "../buyDomainModal"
 //import proxy from "@/services/proxy"
 
 
@@ -89,14 +88,33 @@ interface ApiResponse {
 }
 */
 
-// interface IEdgarResponse {
-//     data: {
-//         success: boolean,
-//         nome: string,
-//         numero_contacto: string,
-//         endereco: string,
-//     }
-// }
+interface UserInfo {
+    nif: string;
+    gsmc: string;
+    ssswjg: string;
+    nsrdz: string;
+    nsrfrdb: string;
+    nsrcwfzr: string;
+    hdjy: string;
+    lxfs: string;
+    email: string;
+    hdzt: string;
+    ckd: string;
+    tap_type_code: string;
+    regimeIva: string;
+    nameAbb: string;
+    addressDbb: string;
+    fzjgList: [];
+    nsrzt: string;
+    companyName: string;
+}
+
+ export interface NIF_RESPONSE {
+    success: boolean;
+    data: UserInfo;
+    error: string | null;
+    dataCount: number;
+}
 
 
 const NIF_REGEX = /^[0-9]{10}$/
@@ -137,7 +155,7 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
         setDomainVerifyProcessComplete
     } } = usePayStore()
 
-    const { checkDomain } = useUtils()
+    const { checkDomain, formatMoney } = useUtils()
 
     useEffect(() => {
         setTotal(ciclo.ciclo.multiplicador * plan.preco)
@@ -149,8 +167,6 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
         }
     }, [domainMode])
 
-    const { formatMoney } = useUtils()
-
     useEffect(() => {
         getDomainExtensions()
     }, [])
@@ -159,13 +175,13 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
 
         if (selectedExtension.tipo !== '') {
             setLoaderLoading(true)
-            setCurrentDomain(`${verifyDomain}${selectedExtension.tipo}`)
+            setCurrentDomain(`${verifDomain}${selectedExtension.tipo}`)
             try {
                 const json: domain = await checkDomain(`${verifDomain}${selectedExtension.tipo}`)
                 if (!json.domain_status && json.nameservers.length === 0) {
                     toast.success('Domínio disponivel')
                     setCurrentDomainAvailable(true)
-                    setModalRegister(true)
+                    setOpenedStatus(true)
                 }
                 else {
                     toast.error('Domínio indisponivel')
@@ -246,30 +262,28 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
         //     setLoadingVerify(false)
         // }º
         try {
-            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
-            console.log(response)
- 
- 
-          
-          
-             if (response.success) {
-                 toast.success('BI Verificado com sucesso!')
-                 setClientLoadedInfo({
-                     name: response.data.gsmc
-                 })
-                 if (NIF_REGEX.test(nif)) {
-                     setIsNIFLoaded(true)
-                     setIsBILoaded(false)
-                 }
-                 else if (BI_REGEX.test(nif)) {
-                     setIsBILoaded(true)
-                     setIsNIFLoaded(false)
-                 }
-             }
-         }
-         catch {
-             toast.error('Ocorreu um erro ao processar a sua solicitação!')
-         }
+            const response: NIF_RESPONSE = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+            if (response.success) {
+                toast.success('BI Verificado com sucesso!')
+                setClientLoadedInfo({
+                    name: response.data.gsmc
+                })
+                if (NIF_REGEX.test(nif)) {
+                    setIsNIFLoaded(true)
+                    setIsBILoaded(false)
+                }
+                else if (BI_REGEX.test(nif)) {
+                    setIsBILoaded(true)
+                    setIsNIFLoaded(false)
+                }
+            }
+            else {
+                toast.error('Não encontrado!')
+            }
+        }
+        catch {
+            toast.error('Ocorreu um erro ao processar a sua solicitação!')
+        }
         finally {
             setLoadingVerify(false)
         }
@@ -278,37 +292,37 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
     function registerTitular() {
         if (selectedExtension.tipo === ".com" && ciclo.ciclo.multiplicador === 12) {
             setCurrentDomain(`${verifDomain}${selectedExtension.tipo}`)
-                const product = {
-                    id: (cartLenght + 1).toString(),
-                    name: `Domínio premium ${verifDomain}${selectedExtension.tipo}`,
-                    planId: selectedExtension.id.toString(),
-                    price: 0,
-                    domainName: `${verifDomain}${selectedExtension.tipo}`,
-                    entensionId: selectedExtension.id,
-                    newDomain: true,
-                    type: "domain",
-                    joined: true
+            const product = {
+                id: (cartLenght + 1).toString(),
+                name: `Domínio premium ${verifDomain}${selectedExtension.tipo}`,
+                planId: selectedExtension.id.toString(),
+                price: 0,
+                domainName: `${verifDomain}${selectedExtension.tipo}`,
+                entensionId: selectedExtension.id,
+                newDomain: true,
+                type: "domain",
+                joined: true
+            }
+            addToCart(product)
+            setRegisterLoading(true)
+            setTimeout(() => {
+                const newDomainTitular = {
+                    nif: nif,
+                    nome: name,
+                    endereco: address,
+                    pais: country,
+                    domain: `${verifDomain}${selectedExtension.tipo}`,
+                    extensionId: selectedExtension.id,
+                    new: true,
+                    to: 'hospedagem'
                 }
-                addToCart(product)
-                setRegisterLoading(true)
-                setTimeout(() => {
-                    const newDomainTitular = {
-                        nif: nif,
-                        nome: name,
-                        endereco: address,
-                        pais: country,
-                        domain: `${verifDomain}${selectedExtension.tipo}`,
-                        extensionId: selectedExtension.id,
-                        new: true,
-                        to: 'hospedagem'
-                    }
-                    Cookies.set('newDomainTitular', JSON.stringify(newDomainTitular))
-                    toast.success('Dominio registado com sucesso!')
-                    setRegisterLoading(false)
-                    setModalRegister(false)
-                    setIsOpened(false)
-                    setProcessComplete(true)
-                }, 1000)
+                Cookies.set('newDomainTitular', JSON.stringify(newDomainTitular))
+                toast.success('Dominio registado com sucesso!')
+                setRegisterLoading(false)
+                setModalRegister(false)
+                setIsOpened(false)
+                setProcessComplete(true)
+            }, 1000)
         }
         else {
             if ((selectedExtension.tipo === ".co.ao" || selectedExtension.tipo === ".ao") && verifDomain.length === 3) {
@@ -439,6 +453,8 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
         })
     }, [])
 
+    const [openedStatus, setOpenedStatus] = useState(false)
+
     return (
         <>
             <Dialog open={opened} >
@@ -556,9 +572,9 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
             <Dialog open={modalRegister} >
                 <DialogContent className="sm:max-w-[425px] bg-white">
                     <DialogHeader>
-                        <DialogTitle className="text-black">Registar domínio</DialogTitle>
+                        <DialogTitle className="text-black">Titularidade do domínio</DialogTitle>
                         <DialogDescription className="text-black">
-                            Insira as informações do domínio.
+                            Insira as informações de titularidade do domínio.
                         </DialogDescription>
                     </DialogHeader>
                     <form className="flex flex-col gap-2">
@@ -610,6 +626,28 @@ export function BuyHostingModal({ opened, setOpened, plans, planIndex }: ICreate
                     </form>
                 </DialogContent>
             </Dialog>
+
+            <Dialog open={openedStatus} >
+                <DialogContent className="sm:max-w-[325px] bg-white">
+                    <DialogHeader>
+                        <DialogTitle className="text-[#000]">{currentDomain}</DialogTitle>
+                        <DialogDescription className="text-[#000]">
+                        <>Domínio disponível para registro ao preço de <span className="bg-[#12753A11] text-[#12753A] py-1.5 px-3">{formatMoney((currentDomain.split('.')[0].length === 3  && (selectedExtension.tipo === '.ao' || selectedExtension.tipo === '.co.ao')) ? 300000 : selectedExtension.preco)}</span></>
+                        </DialogDescription>
+                    </DialogHeader>
+                    <div className="w-full flex flex-col items-center justify-center">
+                        <h1 className="text-2xl font-bold" style={{ color: "#096909"}}>Domínio disponível</h1>
+                        <div className="flex items-center justify-center gap-2 mt-6 w-full">
+                            <Button className="bg-[#fff] hover:bg-[#fff]" type="button" onClick={() => setOpenedStatus(false)} variant={'outline'}>Verificar outro</Button>
+                            <Button className="bg-[#012f01] w-1/2 hover:bg-[#012f01]" type="button" onClick={() => {
+                                setOpenedStatus(false)
+                                setModalRegister(true)
+                            }}>Registar</Button>
+                        </div>
+                    </div>
+                </DialogContent>
+            </Dialog>
+
             <ExitModal openedExit={openedExit} setOpenedExit={setOpenedExit} />
         </>
     )

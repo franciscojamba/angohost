@@ -28,8 +28,9 @@ import { toast } from "sonner"
 //import proxy from "@/services/proxy"
 import usePayHosting from "@/hooks/usePayHosting"
 import api from "@/services/api"
-import { IMinfinResponse } from "../buyDomainModal"
+
 import axios from "axios"
+import { NIF_RESPONSE } from "../buyHostingModal"
 
 interface Client {
     id: string;
@@ -335,7 +336,7 @@ export function PayModal({ openedExit, setOpenedExit }: IExitModalProps) {
         //     setLoadingVerify(false)
         // }º
         try {
-            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+            const response: NIF_RESPONSE = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
             console.log(response)
  
  

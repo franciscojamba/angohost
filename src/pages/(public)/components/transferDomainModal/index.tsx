@@ -19,8 +19,8 @@ import Cookies from "js-cookie"
 import { RejectModal } from "../rejectModal"
 // import axios from "axios"
 // import proxy from "@/services/proxy"
-import { IMinfinResponse } from "../buyDomainModal"
 import axios from "axios"
+import { NIF_RESPONSE } from "../buyHostingModal"
 
 // interface IYabaduRespose {
 //     sucess: boolean,
@@ -158,7 +158,7 @@ export function TransferDomainModal({ opened, setOpened, eppKey }: { opened: boo
         // }º
         try {
             
-            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
+            const response: NIF_RESPONSE = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
            console.log(response)
 
 

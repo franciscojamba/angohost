@@ -10,7 +10,7 @@ import {  Dispatch, SetStateAction, useState } from "react"
 import { BuyDomainModal } from "../buyDomainModal"
 import { EppKeyModal } from "../eppKeyModal"
 
-export function DomainStatusModal({ opened, setOpened, status, currentDomain }: { opened: boolean, setOpened: Dispatch<SetStateAction<boolean>>, status: boolean, currentDomain: string}) {
+export function DomainStatusModal({ opened, setOpened, status, currentDomain, price }: { opened: boolean, setOpened: Dispatch<SetStateAction<boolean>>, status: boolean, currentDomain: string, price: number}) {
 
     const [openBuy, setOpenBuy] = useState(false)
     const [openedTransfer, setOpenedTransfer] = useState(false)
@@ -24,7 +24,7 @@ export function DomainStatusModal({ opened, setOpened, status, currentDomain }: 
                         <DialogDescription className="text-[#000]">
                             {
                                 status ? (
-                                    "Domínio disponível para registro"
+                                    <>Domínio disponível para registro ao preço de <span className="bg-[#12753A11] text-[#12753A] py-1.5 px-3">{price}</span></>
                                 ) : (
                                     "Domínio indisponível para registro"
                                 )

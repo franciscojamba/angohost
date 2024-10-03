@@ -51,6 +51,10 @@ import ClientsLayout from "./pages/admin/(pages)/(private)/panel/clients";
 import BuyPage from "./pages/(public)/(pages)/carrinho";
 import EmailLayout from "./pages/cliente/(pages)/(private)/painel/email";
 import EmailManageView from "./pages/cliente/(pages)/(private)/painel/email/gerir";
+import EmailConfirm from "./pages/cliente/(pages)/(auth)/emailConfirmation";
+import RecoverCredentials from "./pages/cliente/(pages)/(auth)/recover-password";
+import ResetPassword from "./pages/cliente/(pages)/(auth)/reset-password";
+import Expired from "./pages/(public)/(pages)/expired";
 
 const router = createBrowserRouter([
     {
@@ -129,6 +133,10 @@ const router = createBrowserRouter([
             {
                 path: "carrinho",
                 element: <BuyPage />
+            },
+            {
+                path: "expired",
+                element: <Expired />
             }
         ]
     },
@@ -152,6 +160,18 @@ const router = createBrowserRouter([
             {
                 path: "painel",
                 element: <ClientPanel />
+            },
+            {
+                path: "recuperacao",
+                element: <RecoverCredentials />
+            },
+            {
+                path: "confirmacao",
+                element: <EmailConfirm />
+            },
+            {
+                path: "redefinir-senha/:token",
+                element: <ResetPassword />
             },
         ]
     }

@@ -27,7 +27,6 @@ import useCart from "@/hooks/useCart"
 import { ExitModal } from "../exitModal"
 //import proxy from "@/services/proxy"
 import axios from "axios"
-import { IMinfinResponse } from "../buyDomainModal"
 
 /*
 interface IYabaduRespose {
@@ -92,14 +91,33 @@ interface Email {
     atualizadoEm: string;
 }
 
-// interface IEdgarResponse {
-//     data: {
-//         success: boolean,
-//         nome: string,
-//         numero_contacto: string,
-//         endereco: string,
-//     }
-// }
+interface UserInfo {
+    nif: string;
+    gsmc: string;
+    ssswjg: string;
+    nsrdz: string;
+    nsrfrdb: string;
+    nsrcwfzr: string;
+    hdjy: string;
+    lxfs: string;
+    email: string;
+    hdzt: string;
+    ckd: string;
+    tap_type_code: string;
+    regimeIva: string;
+    nameAbb: string;
+    addressDbb: string;
+    fzjgList: [];
+    nsrzt: string;
+    companyName: string;
+}
+
+interface NIF_RESPONSE {
+    success: boolean;
+    data: UserInfo;
+    error: string | null;
+    dataCount: number;
+}
 
 const NIF_REGEX = /^[0-9]{10}$/
 const BI_REGEX = /^[0-9]{9}[a-zA-Z]{2}[0-9]{3}$/
@@ -155,17 +173,19 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
         getDomainExtensions()
     }, [])
 
+    const [openedStatus, setOpenedStatus] = useState(false)
+
     async function verifyDomain() {
 
         if (selectedExtension.tipo !== '') {
             setLoaderLoading(true)
-            setCurrentDomain(`${verifyDomain}${selectedExtension.tipo}`)
+            setCurrentDomain(`${verifDomain}${selectedExtension.tipo}`)
             try {
                 const json: domain = await checkDomain(`${verifDomain}${selectedExtension.tipo}`)
                 if (!json.domain_status && json.nameservers.length === 0) {
                     toast.success('Domínio disponivel')
                     setCurrentDomainAvailable(true)
-                    setModalRegister(true)
+                    setOpenedStatus(true)
                 }
                 else {
                     toast.error('Domínio indisponivel')
@@ -316,13 +336,7 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
         //     setLoadingVerify(false)
         // }º
         try {
-            
-            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
-           console.log(response)
-
-
-         
-         
+            const response: NIF_RESPONSE = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
             if (response.success) {
                 toast.success('BI Verificado com sucesso!')
                 setClientLoadedInfo({
@@ -336,6 +350,9 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
                     setIsBILoaded(true)
                     setIsNIFLoaded(false)
                 }
+            }
+            else {
+                toast.error('Não encontrado!')
             }
         }
         catch {
@@ -503,9 +520,9 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
             <Dialog open={modalRegister} >
                 <DialogContent className="sm:max-w-[425px] bg-white">
                     <DialogHeader>
-                        <DialogTitle className="text-black">Registar domínio</DialogTitle>
+                        <DialogTitle className="text-black">Titularidade do domínio</DialogTitle>
                         <DialogDescription className="text-black">
-                            Insira as informações do domínio.
+                            Insira as informações de titularidade do domínio.
                         </DialogDescription>
                     </DialogHeader>
                     <form className="flex flex-col gap-2">
@@ -555,6 +572,27 @@ export function BuyEmailModal({ opened, setOpened, plans, planIndex }: ICreateMo
                             }
                         </div>
                     </form>
+                </DialogContent>
+            </Dialog>
+
+            <Dialog open={openedStatus} >
+                <DialogContent className="sm:max-w-[325px] bg-white">
+                    <DialogHeader>
+                        <DialogTitle className="text-[#000]">{currentDomain}</DialogTitle>
+                        <DialogDescription className="text-[#000]">
+                        <>Domínio disponível para registro ao preço de <span className="bg-[#12753A11] text-[#12753A] py-1.5 px-3">{formatMoney((currentDomain.split('.')[0].length === 3  && (selectedExtension.tipo === '.ao' || selectedExtension.tipo === '.co.ao')) ? 300000 : selectedExtension.preco)}</span></>
+                        </DialogDescription>
+                    </DialogHeader>
+                    <div className="w-full flex flex-col items-center justify-center">
+                        <h1 className="text-2xl font-bold" style={{ color: "#096909"}}>Domínio disponível</h1>
+                        <div className="flex items-center justify-center gap-2 mt-6 w-full">
+                            <Button className="bg-[#fff] hover:bg-[#fff]" type="button" onClick={() => setOpenedStatus(false)} variant={'outline'}>Verificar outro</Button>
+                            <Button className="bg-[#012f01] w-1/2 hover:bg-[#012f01]" type="button" onClick={() => {
+                                setOpenedStatus(false)
+                                setModalRegister(true)
+                            }}>Registar</Button>
+                        </div>
+                    </div>
                 </DialogContent>
             </Dialog>
 

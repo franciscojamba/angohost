@@ -68,7 +68,7 @@ export default function CheckDomainAvailableForm() {
                     setCurrentDomainAvailable(true)
                 }
                 else {
-                    toast.error('Dominio indisponivel')
+                    toast.error('DOminio indisponivel')
                     setCurrentDomainAvailable(false)
                 }
                 setDomainVerifyProcessComplete(true)
@@ -132,7 +132,7 @@ export default function CheckDomainAvailableForm() {
                 {isLoading ? <LoaderComponent color="#fff" /> : "Verificar"}
             </button>
             <RejectModal openedReject={opendedReject} setOpenedReject={setOpendedReject} />
-            <DomainStatusModal opened={opened} setOpened={setOpened} status={currentDomainAvailable} currentDomain={currentDomain} />
+            <DomainStatusModal opened={opened} setOpened={setOpened} status={currentDomainAvailable} currentDomain={currentDomain} price={(currentDomain.split('.')[0].length === 3  && (currentDomainExtension.tipo === '.ao' || currentDomainExtension.tipo === '.co.ao')) ? 300000 : currentDomainExtension.preco}/>
         </form>
     )
 }

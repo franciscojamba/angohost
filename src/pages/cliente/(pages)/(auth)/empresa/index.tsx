@@ -51,6 +51,9 @@ export default function Login() {
                                     />
                                     {errors.password && <p className="text-[#ff0000] w-full text-left">{errors.password.message}</p>}
                                 </div>
+                                <div className="w-full flex items-center justify-end mb-3">
+                                    <Link to={"/cliente/recuperacao"} className="text-[#7b8a9c] text-[0.9rem]">Esqueci a minha senha</Link>
+                                </div>
                                 <button type="submit" disabled={isLoading} className="button_auth" style={{ background: 'background: linear-gradient(180deg, #2160ad, #082140);' }}>
                                     {isLoading ? <LoaderComponent color="#fff" /> : "Entrar"}
                                 </button>

@@ -15,9 +15,9 @@ import Cookies from "js-cookie"
 import { ExitModal } from "../exitModal"
 import useCart from "@/hooks/useCart"
 import usePayStore from "@/contexts/payStore"
+
 //import proxy from "@/services/proxy"
 import axios from "axios"
-
 
 // interface IYabaduRespose {
 //     sucess: boolean,
@@ -64,47 +64,33 @@ interface ApiResponse {
 }
 */
 
-// interface IEdgarResponse {
-//     data: {
-//         success: boolean,
-//         nome: string,
-//         numero_contacto: string,
-//         endereco: string,
-//     }
-// }
+interface UserInfo {
+    nif: string;
+    gsmc: string;
+    ssswjg: string;
+    nsrdz: string;
+    nsrfrdb: string;
+    nsrcwfzr: string;
+    hdjy: string;
+    lxfs: string;
+    email: string;
+    hdzt: string;
+    ckd: string;
+    tap_type_code: string;
+    regimeIva: string;
+    nameAbb: string;
+    addressDbb: string;
+    fzjgList: [];
+    nsrzt: string;
+    companyName: string;
+}
 
-
-
-
-
-export interface IMinfinResponse  {
+interface NIF_RESPONSE {
     success: boolean;
-    data: CompanyData;
+    data: UserInfo;
     error: string | null;
     dataCount: number;
-  }
-  
-  interface CompanyData {
-    nif: string;
-    gsmc: string; // Nome da empresa
-    ssswjg: string; // Código ou identificação relacionado
-    nsrdz: string; // Endereço da empresa
-    nsrfrdb: string; // Número de registro
-    nsrcwfzr?: string; // Campo opcional (pode estar vazio)
-    hdjy: string; // Código de atividade
-    lxfs: string; // Telefone ou forma de contato
-    email: string; // Código de atividade duplicado (baseado nos dados fornecidos)
-    hdzt: string; // Status da empresa
-    ckd?: string; // Campo opcional (pode estar vazio)
-    tap_type_code: string; // Tipo de empresa/código
-    regimeIva: string; // Regime de IVA
-    nameAbb: string; // Nome abreviado da empresa
-    addressDbb: string; // Endereço da empresa
-    fzjgList: any[]; // Lista de agências/filiais, se houver
-    nsrzt: string; // Status de registro
-    companyName: string; // Nome completo da empresa
-  }
-  
+}
 
 
 const NIF_REGEX = /^[0-9]{10}$/
@@ -201,41 +187,6 @@ export function BuyDomainModal({ opened, setOpened }: ICreateModalProps) {
     async function verifyNif() {
         setClientNIF(nif.toUpperCase())
         setLoadingVerify(true)
-
-
-        // const consultarNIF = async () => {
-        //     const payload = new URLSearchParams({
-        //       'javax.faces.partial.ajax': 'true',
-        //       'javax.faces.source': 'j_id_2x:j_id_34',
-        //       'javax.faces.partial.execute': 'j_id_2x',
-        //       'javax.faces.partial.render': 'showpanelNIF',
-        //       'j_id_2x:j_id_34': 'j_id_2x:j_id_34',
-        //       'j_id_2x:txtNIFNumber': nif,
-        //       'j_id_2x_SUBMIT': '1',
-        //       'javax.faces.ViewState': 'dswdfW29EJBH43tW0SPE8mlzs0uCel1ZeHwZpaUeZgLUoGuO'
-        //     });
-        
-        //     try {
-        //       const response = await fetch('https://portaldocontribuinte.minfin.gov.ao/consultar-headNifId-do-contribuinte', {
-        //         method: 'POST',
-        //         headers: {
-        //           'Content-Type': 'application/x-www-form-urlencoded',
-        //         },
-        //         body: payload.toString(),
-        //       });
-        
-        //       if (!response.ok) {
-        //         throw new Error('Network response was not ok');
-        //       }
-        
-        //       const data = await response.json(); // Ajuste conforme a resposta da API
-        //       console.log(data)
-        //     } catch (error) {
-        //         console.log(error)
-        //     }
-        //   };
-        //   await consultarNIF()
-
         // if (NIF_REGEX.test(nif)) {
         //     try {
         //         const response: IYabaduRespose = await (await proxy.get(`/yabaduu.ao/ao/actions/nif.ajcall.php?nif=${nif}`)).data
@@ -283,13 +234,7 @@ export function BuyDomainModal({ opened, setOpened }: ICreateModalProps) {
         //     setLoadingVerify(false)
         // }º
         try {
-            
-            const response: IMinfinResponse = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
-           console.log(response)
-
-
-         
-         
+            const response: NIF_RESPONSE = await (await axios.get(`https://invoice.minfin.gov.ao/commonServer/common/taxpayer/get/${nif}`)).data
             if (response.success) {
                 toast.success('BI Verificado com sucesso!')
                 setClientLoadedInfo({
@@ -303,6 +248,9 @@ export function BuyDomainModal({ opened, setOpened }: ICreateModalProps) {
                     setIsBILoaded(true)
                     setIsNIFLoaded(false)
                 }
+            }
+            else {
+                toast.error('Não encontrado!')
             }
         }
         catch {
@@ -326,9 +274,9 @@ export function BuyDomainModal({ opened, setOpened }: ICreateModalProps) {
             <Dialog open={opened} >
                 <DialogContent className="sm:max-w-[425px] bg-white">
                     <DialogHeader>
-                        <DialogTitle className="text-black">Registar domínio</DialogTitle>
+                        <DialogTitle className="text-black">Titularidade do domínio</DialogTitle>
                         <DialogDescription className="text-black">
-                            Insira as informações do titular do domínio.
+                            Insira as informações de titularidade do domínio.
                         </DialogDescription>
                     </DialogHeader>
                     <form className="flex flex-col gap-2">
