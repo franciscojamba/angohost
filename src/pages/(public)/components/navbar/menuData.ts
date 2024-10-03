@@ -92,7 +92,7 @@ const menuData:MenuItem[] = [
             },
             {
                 label: 'Google Workspace',
-                href: '/'
+                href: '/email-office-365'
             },
         ],
         

@@ -95,8 +95,8 @@ const emailData: { title: string; href: string; description: string, url: string
             "Melhor hospedagem de e-mail empresarial acessível.",
     },
     {
-        title: "Google Workspace",
-        href: "/Email-profissional",
+        title: "Microsoft 365",
+        href: "/email-office-365",
         url: 'https://www.squarebrothers.com/images/icon/google-workspace.svg',
         description:
             "Colabore mais facilmente com e-mail, Drive, Documentos e muito mais.",
