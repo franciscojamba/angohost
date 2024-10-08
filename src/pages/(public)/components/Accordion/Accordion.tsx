@@ -27,7 +27,7 @@ export const AccordionPetrohost = () => (
                 <Header
 
                     avatarUrl={host_icon}
-                    title="É fácil hospedar sites na Petrohost?"
+                    title="É fácil hospedar sites na Angohost?"
                     subtitle=""
 
                 />
@@ -58,7 +58,7 @@ export const AccordionPetrohost = () => (
             header={
                 <Header
                     avatarUrl={dns_icon}
-                    title="Por que comprar domínio com a Petrohost?"
+                    title="Por que comprar domínio com a Angohost?"
                     subtitle=""
                 />
             }
@@ -114,7 +114,7 @@ export const AccordionPetrohost = () => (
             header={
                 <Header
                     avatarUrl={internet_icon}
-                    title="Posso criar um site rápido com o construtor de sites da Petrohost?"
+                    title="Posso criar um site rápido com o construtor de sites da Angohost?"
                     subtitle=""
                 />
             }

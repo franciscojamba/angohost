@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from '../../../../assets/images/PETROHOST-02.png'
+import logo from '../../../../assets/images/ANGOHOST-02.png'
 import { Home } from "lucide-react"
 
 export default function PaginaDeErro() {

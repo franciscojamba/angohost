@@ -1,0 +1,176 @@
+/* Estilize o container das cartas de preços */
+.pricing-container {
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 20px; 
+/* Espaçamento entre as cartas */
+}
+
+/* Estilize cada carta de preço */
+.pricing-card {
+  background-color: #f9f9f9;
+  border: 1px solid #6361be5e;
+  padding: 20px 30px 20px 30px;
+  text-align: center;
+  border-radius: 16px;
+  width: 370px;
+  max-width: 370px;
+  min-width: 370px;
+
+}
+.pricing-card.pricing-card-m {
+  background: linear-gradient(0deg,#3e00b0 12%, #450153 100% );
+}
+
+/* Estilize o título da carta */
+.pricing-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0e3f7b;
+  width: 100%;
+  text-align: left;
+}
+.pricing-card-m h3 {
+  color: #fff;
+}
+.pricing-card-description-container {
+  height: 50px;
+  overflow: scroll;
+}
+.pricing-card-description-container::-webkit-scrollbar {
+  display: none;
+}
+.pricing-card-description {
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #051931;
+}
+.pricing-card-m .pricing-card-description {
+  color: #fff;
+}
+/* Estilize o preço */
+
+
+/* Estilize a lista de recursos */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilize os itens da lista */
+.pricing-card li {
+  margin-bottom: 5px;
+}
+.separator {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #0e3f7b2a;
+}
+.pricing-card-m .separator {
+  background-color: #ffffff44;
+}
+.list-feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 20px;
+}
+.list-feature li{
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 10px;
+     text-align: left;
+     margin-top: 3px;
+}
+.pricing-card-m .list-feature li {
+  color: #f9f9f9;
+}
+
+.descontos{
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    gap: 5px;
+    margin: 20px 0px 0px 0px !important;
+}
+.descontos-economize-valor{
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    font-size: 0.8rem !important;
+    color: #62676c;
+    padding: 5px 0px !important;
+    text-decoration: line-through;
+    width: 80px !important;
+    margin: 0 !important;
+}
+.pricing-card-m .descontos-economize-valor {
+  color: #f9f9f99a;
+}
+.descontos-economize{
+    display: flex;
+    margin: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #6361be5e !important;
+    border-radius: 30px !important;
+    font-size: 0.8rem !important;
+    width: 125px !important;
+    padding: 8px 0px !important;
+    font-weight: 600;
+}
+.pricing-card-m .descontos-economize {
+  background-color: #2975d2 !important;
+  color: #fff;
+}
+.price-plano{
+  margin-top: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price-plane-info {
+    color: #0e3f7b;
+    font-size: 0.8rem;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.pricing-card-m .price-plane-info {
+    color: #f9f9f9;
+}
+.price-plano p {
+    text-align: center;
+    font-size: 50px !important;
+    font-weight:bold;
+    color: #0e3f7b !important;
+    margin-bottom: 0px;
+    text-align: left !important;
+    width: 100%;
+}
+.pricing-card-m .price-plano p {
+  color: #fff !important;
+}
+.price-plano p > span {
+  color: #0e3f7b;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+.pricing-card-m .price-plano p > span {
+  color: #ffffffa7;
+}
+.pricing-card-title{
+    color: #121212;
+    font-size: 48px;
+}
+.pricing-card-m .pricing-card-title {
+  color: #fff !important;
+}

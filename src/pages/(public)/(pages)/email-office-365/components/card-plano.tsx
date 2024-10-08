@@ -1,4 +1,5 @@
 import { CardContainer } from '@/components/ui/3d-card';
+import CardMicrosoftOffice from '@/pages/(public)/components/cards-angohost/card-microsoft-office-360';
 import useUtils from '@/utils/useutils';
 import React from 'react';
 
@@ -23,6 +24,43 @@ export const CardPlanoMicrosoft: React.FC<CardProps> = ({
 
     const {formatMoney}=useUtils()
 
+    // const servicesCard1 = [
+    //   { name: "Exchange", icon: "/microsoft-icons/BP-Exchange_RE46TV5.webp", link: "#" },
+    //   { name: "OneDrive", icon: "/microsoft-icons/OneDrive_260px_RE4oUAF.webp", link: "#" },
+    //   { name: "SharePoint", icon: "/microsoft-icons/Sharepoint_260px_RE4oH1F.webp", link: "#" }
+    // ];
+  
+    // const appsCard1 = [
+    //   { name: "Word", icon: "/microsoft-icons/Icon_Word_2x_RE2Xmzs.webp", link: "#" },
+    //   { name: "Excel", icon: "/microsoft-icons/Icon_Excel_2x_RE2Xztz.webp", link: "#" },
+    //   { name: "PowerPoint", icon: "/microsoft-icons/Icon_PowerPoint_2x_RE2Xmzm.webp", link: "#" },
+    //   { name: "Outlook", icon: "/microsoft-icons/BP-Outlook_RE47eLs.webp", link: "#" },
+    // ];
+
+    const servicesCard1 = [
+      { name: "Exchange", icon: "/microsoft-icons/BP-Exchange_RE46TV5.webp", link: "#" },
+      { name: "OneDrive", icon: "/microsoft-icons/OneDrive_260px_RE4oUAF.webp", link: "#" },
+      { name: "SharePoint", icon: "/microsoft-icons/Sharepoint_260px_RE4oH1F.webp", link: "#" },
+      { name: "Word", icon: "/microsoft-icons/Icon_Word_2x_RE2Xmzs.webp", link: "#" },
+      { name: "Excel", icon: "/microsoft-icons/Icon_Excel_2x_RE2Xztz.webp", link: "#" },
+      { name: "PowerPoint", icon: "/microsoft-icons/Icon_PowerPoint_2x_RE2Xmzm.webp", link: "#" },
+      { name: "Outlook", icon: "/microsoft-icons/BP-Outlook_RE47eLs.webp", link: "#" },
+      { name: "Microsoft Loop", icon: "/microsoft-icons/logo_msft_loop_36x36.webp", link: "#" },
+      { name: "Clipchamp", icon: "/microsoft-icons/Icon-Clipchamp-25x25.webp", link: "#" },
+     
+    ];
+  
+    const appsCard1 = [
+      { name: "Word", icon: "/microsoft-icons/Icon_Word_2x_RE2Xmzs.webp", link: "#" },
+      { name: "Excel", icon: "/microsoft-icons/Icon_Excel_2x_RE2Xztz.webp", link: "#" },
+      { name: "PowerPoint", icon: "/microsoft-icons/Icon_PowerPoint_2x_RE2Xmzm.webp", link: "#" },
+      { name: "Outlook", icon: "/microsoft-icons/BP-Outlook_RE47eLs.webp", link: "#" },
+    
+    ];
+  
+  
+  
+
   return (
     <CardContainer>
     <div className=" cursor-pointer border p-6 rounded-lg shadow-lg max-w-sm mx-auto">
@@ -36,9 +74,7 @@ export const CardPlanoMicrosoft: React.FC<CardProps> = ({
         >
           {buttonLabel}
         </a>
-        <p className="text-sm text-gray-500 mt-2">
-          Experimentar gratuitamente durante um mês
-        </p>
+     
       </div>
       <ul className="text-gray-700 space-y-2">
         {features.map((feature, index) => (
@@ -48,6 +84,8 @@ export const CardPlanoMicrosoft: React.FC<CardProps> = ({
           </li>
         ))}
       </ul>
+      <CardMicrosoftOffice title="Plano 1" services={servicesCard1} apps={appsCard1} />
+
     </div>
     </CardContainer>
   );
