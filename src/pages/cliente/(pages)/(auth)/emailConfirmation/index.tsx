@@ -1,7 +1,7 @@
 
 import "../../../styles/globals.css";
 import "../../../styles/particularLogin.css";
-import logo from '@/assets/images/PETROHOST-02.png'
+import logo from '@/assets/images/ANGOHOST-02.png'
 import { Helmet } from "react-helmet";
 import useRecoverCredentials from "@/hooks/useRecoverCredentials";
 import icon from "../../../../../assets/images/mailbox.svg"

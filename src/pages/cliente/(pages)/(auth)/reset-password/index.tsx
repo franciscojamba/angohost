@@ -96,7 +96,7 @@ export default function ResetPassword() {
 
     return (
         <>
-            <Helmet><title>Redfinir senha | Petrohost</title></Helmet>
+            <Helmet><title>Redfinir senha | Angohost</title></Helmet>
             <div className="home_main empresa particular" style={{ height: 'calc(100vh' }}>
                 <div className="home_body">
                     <div className="left empresa reset relative" >

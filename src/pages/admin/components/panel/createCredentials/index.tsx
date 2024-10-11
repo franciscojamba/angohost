@@ -74,6 +74,8 @@ export function CreateCredentialsModal({
         };
         setLoading(true);
         try {
+
+            console.log(form)
             const response: { message: string; success: boolean } = await (
                 await api.post(
                     `/credencialCliente/${url}`,
